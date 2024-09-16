@@ -1,0 +1,236 @@
+/* General Styling */
+body {
+    background-color: #181818;
+    font-family: 'Poppins', sans-serif;
+    color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Container Styling */
+.container {
+    width:70%;
+    padding: 50px;
+    background: linear-gradient(145deg, #222, #2d2d2d);
+    border-radius: 15px;
+    zoom: 65%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top:80px;
+}
+/* Container hover effect */
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+.left{
+    display: grid;
+    float: left;
+    margin-left:auto;
+}
+/* Header Styling */
+h1 {
+    color: #f7b733;
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    font-weight: bold;
+    float: left;
+    margin-right:auto;
+}
+
+/* Header underline effect */
+h1::after {
+    content: '';
+    width: 200px;
+    height: 3px;
+    background-color: #f7b733;
+    position: absolute;
+    bottom: -10px;
+    left:100px;
+    transform: translateX(-50%);
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* Label Styling */
+label {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #f4f4f4;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Input & Select Fields */
+input, select {
+    width: 100%;
+    padding: 15px;
+    background-color: #303030;
+    border: 1px solid #444;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Focus State */
+input:focus, select:focus {
+    border-color: #f7b733;
+    outline: none;
+    box-shadow: 0 0 8px rgba(247, 183, 51, 0.7);
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    background-color: #f7b733;
+    color: #181818;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #ffcb5b;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(247, 183, 51, 0.5);
+}
+
+.right{
+    float: right;
+    margin-left: auto;
+    width: 50%;
+    margin-right:50px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+/* Results Section */
+#results {
+    margin-top: 25px;
+    background-color: #2d2d2d;
+    padding: 25px;
+    border-radius: 10px;
+    align-items: left;
+    text-align: left;
+    width:100%;
+}
+#results h2{
+    color:#f7b733;
+}
+/* Result Text */
+.result p {
+    width: 90%;
+    padding: 15px;
+    background-color: #303030;
+    border: 1px solid #444;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+.result p span{
+    float: right;
+    margin-left: auto;
+}
+/* Hidden Class */
+.hidden {
+    display: grid;
+}
+
+/* Canvas */
+canvas {
+    margin-top: 20px;
+    background: #2d2d2d;
+    width:107%;
+    border-radius:10px;
+    padding: 5px 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1146px) {
+    .container {
+        padding: 40px;
+        width: 80%;
+    }
+    .left{
+        width:100%;
+    }
+    .right{
+        width:95%;
+    }
+    input{
+        width:95%;
+    }
+    select{
+        width:100%;
+    }
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        max-width: 90%;
+        zoom: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    input, select, button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .container {
+        padding: 20px;
+        zoom: 100%;
+    }
+    .right{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: grid;
+        float: center;
+    }
+}
